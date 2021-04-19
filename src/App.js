@@ -16,7 +16,7 @@ class App extends React.Component {
     };
   }
 
-  handleData = (name, surname, phone, email) => {
+  handlePersonalData = (name, surname, phone, email) => {
     this.setState((prevState) => ({
       personalInformations: {
         ...prevState.personalInformations,
@@ -33,7 +33,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <PersonalInformations handleData={this.handleData} />
+        <PersonalInformations handleData={this.handlePersonalData} />
       </div>
     );
   }
