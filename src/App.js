@@ -1,8 +1,10 @@
 import React from "react";
+
 import "./App.sass";
 import Header from "./components/Header";
 import PersonalInformation from "./components/PersonalInformation";
 import Work from "./components/Work"
+
 
 class App extends React.Component {
   constructor(props) {
@@ -30,6 +32,20 @@ class App extends React.Component {
     );
   };
 
+  handleWorkData = (company, position, from, to, city, description, id) => {
+    this.setState((prevState) => ({
+      [id]: {
+        company: company,
+        position: position,
+        from: from,
+        to: to,
+        city: city,
+        description: description,
+      },
+    })
+    );
+
+  }
   render() {
     return (
       <div className="App">
@@ -37,7 +53,8 @@ class App extends React.Component {
         <div className="section is-medium">
         <PersonalInformation handleData={this.handlePersonalData} />
         <hr />
-        <Work />
+        <Work handleData={this.handleWorkData}/>
+
         </div>
       </div>
     );

@@ -11,6 +11,8 @@ class Work extends React.Component {
       to: "",
       location: "",
       details: "",
+      id: uniqid()
+
     };
   }
 
@@ -19,15 +21,18 @@ class Work extends React.Component {
       [e.target.name]: e.target.value,
     });
   };
-
-  // onTrigger = () => {
-  //   this.props.handleData(
-  //     this.state.firstName,
-  //     this.state.lastName,
-  //     this.state.phone,
-  //     this.state.email
-  //   );
-  // };
+  
+  onTrigger = (e) => {
+    this.props.handleData(
+      this.state.company,
+      this.state.position,
+      this.state.from,
+      this.state.to,
+      this.state.location,
+      this.state.details,
+      this.state.id
+    );
+  };
 
   render() {
     return (
@@ -46,7 +51,7 @@ class Work extends React.Component {
                   type="text"
                   placeholder="Company"
                   onChange={this.inputHandler}
-                  value={this.state.firstName}
+                  value={this.state.company}
                 />
               </p>
             </div>
@@ -58,7 +63,7 @@ class Work extends React.Component {
                   type="text"
                   placeholder="Position"
                   onChange={this.inputHandler}
-                  value={this.state.lastName}
+                  value={this.state.postion}
                 />
               </p>
             </div>
@@ -77,7 +82,7 @@ class Work extends React.Component {
                   name="from"
                   type="date"
                   onChange={this.inputHandler}
-                  value={this.state.phone}
+                  value={this.state.from}
                 />
               </p>
             </div>
@@ -91,7 +96,7 @@ class Work extends React.Component {
                   type="date"
                   name="to"
                   onChange={this.inputHandler}
-                  value={this.state.email}
+                  value={this.state.to}
                 />
               </p>
             </div>
@@ -103,7 +108,7 @@ class Work extends React.Component {
                   placeholder="City, country"
                   name="location"
                   onChange={this.inputHandler}
-                  value={this.state.email}
+                  value={this.state.location}
                 />
               </p>
             </div>
@@ -121,6 +126,7 @@ class Work extends React.Component {
                   className="textarea"
                   name="details"
                   onChange={this.inputHandler}
+                  value={this.state.details}
                 ></textarea>
               </div>
             </div>
@@ -132,7 +138,7 @@ class Work extends React.Component {
           <div className="field-body">
             <div className="field">
               <div className="control">
-                <button className="button is-primary" onClick={this.onTrigger}>
+                <button className="button is-primary" id={uniqid()} onClick={this.onTrigger}>
                   Submit
                 </button>
               </div>
