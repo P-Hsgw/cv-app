@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.sass";
 import Header from "./components/Header";
-import PersonalInformations from "./components/PersonalInformations";
+import PersonalInformation from "./components/PersonalInformation";
+import Work from "./components/Work"
 
 class App extends React.Component {
   constructor(props) {
@@ -33,7 +34,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <PersonalInformations handleData={this.handlePersonalData} />
+        <div className="section is-medium">
+        <PersonalInformation handleData={this.handlePersonalData} />
+        <hr />
+        <Work />
+        </div>
       </div>
     );
   }

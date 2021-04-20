@@ -1,6 +1,6 @@
 import React from "react";
 
-class PersonalInformations extends React.Component {
+class PersonalInformation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,12 +22,12 @@ class PersonalInformations extends React.Component {
 
   render() {
     return (
-      <div className="section is-medium">
+      
         <div className="container">
-          <p className="title">Personal informations</p>
+          <p className="title">Personal information</p>
           <div className="field is-horizontal">
             <div className="field-label is-normal">
-              <label className="label">Form</label>
+              <label className="label"></label>
             </div>
             <div className="field-body">
               <div className="field">
@@ -38,6 +38,7 @@ class PersonalInformations extends React.Component {
                     type="text"
                     placeholder="Name"
                     onChange={this.inputHandler}
+                    value = {this.state.firstName}
                   />
                 </p>
               </div>
@@ -49,6 +50,7 @@ class PersonalInformations extends React.Component {
                     type="text"
                     placeholder="Surname"
                     onChange={this.inputHandler}
+                    value = {this.state.lastName}
                   />
                 </p>
               </div>
@@ -63,9 +65,10 @@ class PersonalInformations extends React.Component {
                   <input
                     className="input"
                     name="phone"
-                    type="number"
+                    type="tel"
                     placeholder="Phone number"
                     onChange={this.inputHandler}
+                    value = {this.state.phone}
                   />
                 </p>
               </div>
@@ -77,6 +80,7 @@ class PersonalInformations extends React.Component {
                     placeholder="Email"
                     name="email"
                     onChange={this.inputHandler}
+                    value = {this.state.email}
                   />
                 </p>
               </div>
@@ -92,16 +96,16 @@ class PersonalInformations extends React.Component {
                     className="button is-primary"
                     onClick={this.onTrigger}
                   >
-                    Send message
+                    Submit
                   </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+
     );
   }
 }
 
-export default PersonalInformations;
+export default PersonalInformation;
