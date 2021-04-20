@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./App.sass";
+
 import Header from "./components/Header";
 import PersonalInformation from "./components/PersonalInformation";
 import Work from "./components/Work";
