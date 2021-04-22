@@ -7,17 +7,17 @@ class Header extends React.Component {
     return (
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
-          <h3 className="title">CV CREATOR</h3>
+          <h3 className="title ml-2 mt-2">CV CREATOR</h3>
         </div>
         <div className="navbar-end">
           <div className="navbar-item">
             <p>Website created by Patryk Hasegawa</p>
           </div>
-          <div className="navbar-item">
+          <div className="navbar-item p-0">
             <a href="https://github.com/P-Hsgw" target="blank">
               <span className="icon">
                 <FontAwesomeIcon icon={faGithub} />
-              </span>
+              </span> 
             </a>
           </div>
           <div className="navbar-item">

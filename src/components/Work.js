@@ -1,5 +1,7 @@
 import React from "react";
 import uniqid from "uniqid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 
 class Work extends React.Component {
   constructor(props) {
@@ -11,8 +13,7 @@ class Work extends React.Component {
       to: "",
       location: "",
       details: "",
-      id: uniqid()
-
+      id: uniqid(),
     };
   }
 
@@ -21,7 +22,7 @@ class Work extends React.Component {
       [e.target.name]: e.target.value,
     });
   };
-  
+
   onTrigger = (e) => {
     this.props.handleData(
       this.state.company,
@@ -76,7 +77,7 @@ class Work extends React.Component {
           </div>
           <div className="field-body">
             <div className="field">
-              <p className="control is-expanded has-icons-left">
+              <p className="control is-expanded has-icons-right">
                 <input
                   className="input"
                   name="from"
@@ -84,13 +85,18 @@ class Work extends React.Component {
                   onChange={this.inputHandler}
                   value={this.state.from}
                 />
+                                <span class="icon is-right mt-2">
+                  <FontAwesomeIcon icon={faCalendarAlt} size="xl" />
+                </span>
+
               </p>
+              
             </div>
             <div className="field is-horizontal">
               <div className="field-label is-normal">
                 <label className="label">To</label>
               </div>
-              <p className="control is-expanded has-icons-left has-icons-right">
+              <p className="control is-expanded has-icons-right">
                 <input
                   className="input"
                   type="date"
@@ -98,10 +104,13 @@ class Work extends React.Component {
                   onChange={this.inputHandler}
                   value={this.state.to}
                 />
+                                <span class="icon is-right mt-2">
+                  <FontAwesomeIcon icon={faCalendarAlt} size="xl" />
+                </span>
               </p>
             </div>
             <div className="field">
-              <p className="control is-expanded has-icons-left has-icons-right">
+              <p className="control is-expanded has-icons-right">
                 <input
                   className="input"
                   type="text"
@@ -138,7 +147,11 @@ class Work extends React.Component {
           <div className="field-body">
             <div className="field">
               <div className="control">
-                <button className="button is-primary" id={uniqid()} onClick={this.onTrigger}>
+                <button
+                  className="button is-primary"
+                  id={uniqid()}
+                  onClick={this.onTrigger}
+                >
                   Submit
                 </button>
               </div>

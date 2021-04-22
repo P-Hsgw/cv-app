@@ -93,8 +93,11 @@ class App extends React.Component {
           {!this.state.resumeVisible ? (
             <>
               <PersonalInformation handleData={this.handlePersonalData} name={firstName} surname={lastName} phone={phone} email={email} />
+              <hr />
               <Work handleData={this.handleWorkData} />
+              <hr />
               <Education handleData={this.handleEducationData} />
+              <hr />
               {button}
             </>
           ) : (
