@@ -9,21 +9,26 @@ class Header extends React.Component {
         <div className="navbar-brand">
           <h3 className="title">CV CREATOR</h3>
         </div>
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <span class="icon-text">
-              <span class="icon">
+        <div className="navbar-end">
+          <div className="navbar-item">
+            <a href="#">
+            <span className="icon-text">
+              <span className="icon">
                 <FontAwesomeIcon icon={faGithub} />
               </span>
               <span>Github</span>
             </span>
-
-            <span class="icon-text">
-              <span class="icon">
+            </a>
+          </div>
+          <div className="navbar-item">
+            <a href="#">
+            <span className="icon-text">
+              <span className="icon">
                 <FontAwesomeIcon icon={faLinkedin} />
               </span>
-              <span>Linkedin</span>
+              <span>LinkedIn</span>
             </span>
+            </a>
           </div>
         </div>
       </nav>

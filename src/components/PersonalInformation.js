@@ -4,11 +4,13 @@ class PersonalInformation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: "",
-      lastName: "",
-      phone: "",
-      email: ""
+      firstName: this.props.name,
+      lastName: this.props.surname,
+      phone: this.props.phone,
+      email: this.props.email
     };
+    this.inputHandler = this.inputHandler.bind(this)
+    this.onTrigger = this.onTrigger.bind(this)
   }
   inputHandler = (e) => {
     this.setState({

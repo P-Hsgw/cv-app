@@ -15,7 +15,7 @@ class App extends React.Component {
       personalInformations: {
         firstName: "",
         lastName: "",
-        phone: 0,
+        phone: "",
         email: "",
       },
       resumeVisible: false,
@@ -76,6 +76,8 @@ class App extends React.Component {
   }
 
   render() {
+    const { firstName, lastName, phone, email } = this.state.personalInformations
+
     let button;
 
     if (this.state.resumeVisible) {
@@ -90,7 +92,7 @@ class App extends React.Component {
         <div className="section">
           {!this.state.resumeVisible ? (
             <>
-              <PersonalInformation handleData={this.handlePersonalData} />
+              <PersonalInformation handleData={this.handlePersonalData} name={firstName} surname={lastName} phone={phone} email={email} />
               <Work handleData={this.handleWorkData} />
               <Education handleData={this.handleEducationData} />
               {button}
