@@ -11,23 +11,20 @@ class Header extends React.Component {
         </div>
         <div className="navbar-end">
           <div className="navbar-item">
-            <a href="#">
-            <span className="icon-text">
+            <p>Website created by Patryk Hasegawa</p>
+          </div>
+          <div className="navbar-item">
+            <a href="https://github.com/P-Hsgw" target="blank">
               <span className="icon">
                 <FontAwesomeIcon icon={faGithub} />
               </span>
-              <span>Github</span>
-            </span>
             </a>
           </div>
           <div className="navbar-item">
-            <a href="#">
-            <span className="icon-text">
+            <a href="https://jp.linkedin.com/in/patryk-hasegawa" target="blank">
               <span className="icon">
                 <FontAwesomeIcon icon={faLinkedin} />
               </span>
-              <span>LinkedIn</span>
-            </span>
             </a>
           </div>
         </div>

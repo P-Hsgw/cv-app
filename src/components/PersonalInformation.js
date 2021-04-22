@@ -68,6 +68,7 @@ class PersonalInformation extends React.Component {
                     className="input"
                     name="phone"
                     type="tel"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     placeholder="Phone number"
                     onChange={this.inputHandler}
                     value = {this.state.phone}
