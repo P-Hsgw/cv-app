@@ -22,7 +22,7 @@ class Header extends React.Component {
             </a>
           </div>
           <div className="navbar-item">
-            <a href="https://jp.linkedin.com/in/patryk-hasegawa" target="blank">
+            <a href="https://linkedin.com/in/patryk-hasegawa" target="blank">
               <span className="icon">
                 <FontAwesomeIcon icon={faLinkedin} />
               </span>
