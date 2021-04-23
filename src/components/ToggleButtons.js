@@ -1,7 +1,7 @@
 function DisplayResume(props) {
   return (
     <div className="buttons is-centered">
-    <button onClick={props.onClick} className="button is-medium">
+    <button onClick={props.onClick} className="button is-medium mt-5">
       Display CV
     </button>
     </div>
@@ -11,7 +11,7 @@ function DisplayResume(props) {
 function EditResume(props) {
   return (
     <div className="buttons is-centered">
-    <button onClick={props.onClick} className="button is-medium">
+    <button onClick={props.onClick} className="button is-medium mt-5">
       Edit CV
     </button>
     </div>
