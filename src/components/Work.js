@@ -38,7 +38,7 @@ class Work extends React.Component {
   render() {
     return (
       <div className="container">
-        <p className="title">Work experience</p>
+        <p className="title has-text-primary">Work experience</p>
         <div className="field is-horizontal">
           <div className="field-label is-normal">
             <label className="label"></label>

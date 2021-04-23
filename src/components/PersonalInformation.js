@@ -26,7 +26,7 @@ class PersonalInformation extends React.Component {
     return (
       
         <div className="container">
-          <p className="title">Personal information</p>
+          <p className="title has-text-primary">Personal information</p>
           <div className="field is-horizontal">
             <div className="field-label is-normal">
               <label className="label"></label>

@@ -38,7 +38,7 @@ class Education extends React.Component {
   render() {
     return (
       <div className="container">
-        <p className="title">Education</p>
+        <p className="title has-text-primary">Education</p>
         <div className="field is-horizontal">
           <div className="field-label is-normal">
             <label className="label"></label>
