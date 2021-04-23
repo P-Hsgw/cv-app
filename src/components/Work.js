@@ -85,7 +85,7 @@ class Work extends React.Component {
                   onChange={this.inputHandler}
                   value={this.state.from}
                 />
-                <span className="icon is-right mt-2">
+                <span className="icon is-right">
                   <FontAwesomeIcon icon={faCalendarAlt} />
                 </span>
               </p>
@@ -102,7 +102,7 @@ class Work extends React.Component {
                   onChange={this.inputHandler}
                   value={this.state.to}
                 />
-                <span className="icon is-right mt-2">
+                <span className="icon is-right">
                   <FontAwesomeIcon icon={faCalendarAlt} />
                 </span>
               </p>

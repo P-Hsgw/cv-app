@@ -45,7 +45,7 @@ class Education extends React.Component {
           </div>
           <div className="field-body">
             <div className="field">
-              <p className="control is-expanded has-icons-left">
+              <p className="control is-expanded">
                 <input
                   className="input"
                   name="university"
@@ -57,7 +57,7 @@ class Education extends React.Component {
               </p>
             </div>
             <div className="field">
-              <p className="control is-expanded has-icons-left has-icons-right">
+              <p className="control is-expanded has-icons-right">
                 <input
                   className="input"
                   name="major"
@@ -77,7 +77,7 @@ class Education extends React.Component {
           </div>
           <div className="field-body">
             <div className="field">
-              <p className="control is-expanded has-icons-left has-icons-right">
+              <p className="control is-expanded has-icons-right">
                 <input
                   className="input"
                   name="from"
@@ -85,7 +85,7 @@ class Education extends React.Component {
                   onChange={this.inputHandler}
                   value={this.state.from}
                 />
-                <span className="icon is-right mt-2">
+                <span className="icon is-right">
                   <FontAwesomeIcon icon={faCalendarAlt}/>
                 </span>
               </p>
@@ -102,7 +102,7 @@ class Education extends React.Component {
                   onChange={this.inputHandler}
                   value={this.state.to}
                 />
-                <span className="icon is-right mt-2">
+                <span className="icon is-right">
                   <FontAwesomeIcon icon={faCalendarAlt}/>
                 </span>
               </p>
