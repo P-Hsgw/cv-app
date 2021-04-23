@@ -9,6 +9,7 @@ class Header extends React.Component {
         <div className="navbar-brand">
           <h3 className="title ml-2 mt-2">CV CREATOR</h3>
         </div>
+        <div className="navbar-menu">
         <div className="navbar-end">
           <div className="navbar-item">
             <p>Website created by Patryk Hasegawa</p>
@@ -27,6 +28,7 @@ class Header extends React.Component {
               </span>
             </a>
           </div>
+        </div>
         </div>
       </nav>
     );

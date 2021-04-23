@@ -85,12 +85,10 @@ class Work extends React.Component {
                   onChange={this.inputHandler}
                   value={this.state.from}
                 />
-                                <span class="icon is-right mt-2">
-                  <FontAwesomeIcon icon={faCalendarAlt} size="xl" />
+                <span className="icon is-right mt-2">
+                  <FontAwesomeIcon icon={faCalendarAlt} />
                 </span>
-
               </p>
-              
             </div>
             <div className="field is-horizontal">
               <div className="field-label is-normal">
@@ -104,8 +102,8 @@ class Work extends React.Component {
                   onChange={this.inputHandler}
                   value={this.state.to}
                 />
-                                <span class="icon is-right mt-2">
-                  <FontAwesomeIcon icon={faCalendarAlt} size="xl" />
+                <span className="icon is-right mt-2">
+                  <FontAwesomeIcon icon={faCalendarAlt} />
                 </span>
               </p>
             </div>
