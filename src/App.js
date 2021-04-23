@@ -7,6 +7,7 @@ import PersonalInformation from "./components/PersonalInformation";
 import Work from "./components/Work";
 import Education from "./components/Education";
 import { DisplayResume, EditResume } from "./components/ToggleButtons"
+import {PersonalInfoResume, WorkResume, EducationResume} from "./components/Preview"
 
 class App extends React.Component {
   constructor(props) {
@@ -91,6 +92,7 @@ class App extends React.Component {
         <Header />
         <div className="section">
           {!this.state.resumeVisible ? (
+
             <>
               <PersonalInformation handleData={this.handlePersonalData} name={firstName} surname={lastName} phone={phone} email={email} />
               <hr />
@@ -100,11 +102,18 @@ class App extends React.Component {
               <hr />
               {button}
             </>
+
           ) : (
-            <>{button}</>
+            <div className="container">
+            <p className="title has-text-primary">Resume</p>
+            <PersonalInfoResume name={firstName} surname={lastName} phone={phone} email={email} />
+            <WorkResume />
+            <EducationResume />
+            {button}
+            </div>
+
           )}
         </div>
-
       </div>
     );
   }
