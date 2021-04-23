@@ -107,8 +107,16 @@ class App extends React.Component {
             <div className="container">
             <p className="title has-text-primary">Resume</p>
             <PersonalInfoResume name={firstName} surname={lastName} phone={phone} email={email} />
+            <p className="title has-text-primary mt-5">Work Experience</p>
             <WorkResume />
+            <WorkResume />
+
+            <WorkResume />
+
+            <hr />
+            <p className="title has-text-primary">Education</p>
             <EducationResume />
+            <hr />
             {button}
             </div>
 

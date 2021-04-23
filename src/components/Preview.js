@@ -42,10 +42,9 @@ class WorkResume extends React.Component {
 
     return (
       <div className="container">
-        <p className="title has-text-primary">Work Experience</p>
         <div className="columns is-centered">
           <div className="column">
-            <p className="title is-5">
+            <p className="title is-5 mt-3">
               Senior Partnerships Specialist, G2A.COM Limited
             </p>
             <p className="subtitle is-6">March 2018 - April 2021</p>
@@ -66,7 +65,6 @@ class WorkResume extends React.Component {
             <p>Tokyo, Japan</p>
           </div>
         </div>
-        <hr />
       </div>
     );
   }
@@ -85,7 +83,6 @@ class EducationResume extends React.Component {
 
     return (
       <div className="container">
-        <p className="title has-text-primary">Education</p>
         <div className="columns is-centered">
           <div className="column">
             <p className="title is-5">
