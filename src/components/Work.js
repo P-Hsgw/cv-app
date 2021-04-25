@@ -64,7 +64,7 @@ class Work extends React.Component {
                   type="text"
                   placeholder="Position"
                   onChange={this.inputHandler}
-                  value={this.state.postion}
+                  value={this.state.position}
                 />
               </p>
             </div>

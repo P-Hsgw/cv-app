@@ -165,7 +165,7 @@ class App extends React.Component {
                 position={this.state.work_1.position}
                 from={this.state.work_1.from}
                 to={this.state.work_1.to}
-                location={this.state.work_1.location}
+                location={this.state.work_1.city}
                 details={this.state.work_1.description}
               />
               <hr />
