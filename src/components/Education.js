@@ -7,13 +7,13 @@ class Education extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      university: "",
-      major: "",
-      from: "",
-      to: "",
-      location: "",
-      details: "",
-      id: uniqid(),
+      university: this.props.university,
+      major: this.props.major,
+      studied_from: this.props.studied_from,
+      studied_to: this.props.studied_to,
+      location: this.props.location,
+      details: this.props.details,
+      id: this.props.id,
     };
   }
 
@@ -27,8 +27,8 @@ class Education extends React.Component {
     this.props.handleData(
       this.state.university,
       this.state.major,
-      this.state.from,
-      this.state.to,
+      this.state.studied_from,
+      this.state.studied_to,
       this.state.location,
       this.state.details,
       this.state.id
@@ -52,7 +52,7 @@ class Education extends React.Component {
                   type="text"
                   placeholder="University"
                   onChange={this.inputHandler}
-                  value={this.state.company}
+                  value={this.state.university}
                 />
               </p>
             </div>
@@ -64,7 +64,7 @@ class Education extends React.Component {
                   type="text"
                   placeholder="Major"
                   onChange={this.inputHandler}
-                  value={this.state.postion}
+                  value={this.state.major}
                 />
               </p>
             </div>
@@ -80,10 +80,10 @@ class Education extends React.Component {
               <p className="control is-expanded has-icons-right">
                 <input
                   className="input"
-                  name="from"
+                  name="studied_from"
                   type="date"
                   onChange={this.inputHandler}
-                  value={this.state.from}
+                  value={this.state.studied_from}
                 />
                 <span className="icon is-right">
                   <FontAwesomeIcon icon={faCalendarAlt}/>
@@ -98,9 +98,9 @@ class Education extends React.Component {
                 <input
                   className="input"
                   type="date"
-                  name="to"
+                  name="studied_to"
                   onChange={this.inputHandler}
-                  value={this.state.to}
+                  value={this.state.studied_to}
                 />
                 <span className="icon is-right">
                   <FontAwesomeIcon icon={faCalendarAlt}/>

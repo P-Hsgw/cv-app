@@ -7,13 +7,13 @@ class Work extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      company: "",
-      position: "",
-      from: "",
-      to: "",
-      location: "",
-      details: "",
-      id: uniqid(),
+      company: this.props.company,
+      position: this.props.position,
+      from: this.props.from,
+      to: this.props.to,
+      location: this.props.location,
+      details: this.props.details,
+      id: this.props.id,
     };
   }
 

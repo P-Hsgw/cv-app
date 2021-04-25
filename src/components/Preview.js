@@ -37,7 +37,7 @@ class WorkResume extends React.Component {
       from,
       to,
       location,
-      responsibilities,
+      details,
     } = this.props;
 
     return (
@@ -45,24 +45,15 @@ class WorkResume extends React.Component {
         <div className="columns is-centered">
           <div className="column">
             <p className="title is-5 mt-3">
-              Senior Partnerships Specialist, G2A.COM Limited
+              {position}, {company}
             </p>
-            <p className="subtitle is-6">March 2018 - April 2021</p>
+            <p className="subtitle is-6">{from} - {to}</p>
             <div className="container">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              {details}
             </div>
           </div>
           <div className="column is-narrow has-text-right">
-            <p>Tokyo, Japan</p>
+            <p>{location}</p>
           </div>
         </div>
       </div>
@@ -73,12 +64,7 @@ class WorkResume extends React.Component {
 class EducationResume extends React.Component {
   render() {
     const {
-      company,
-      position,
-      from,
-      to,
-      location,
-      responsibilities,
+      university, major, studied_from, studied_to, description, city
     } = this.props;
 
     return (
@@ -86,24 +72,15 @@ class EducationResume extends React.Component {
         <div className="columns is-centered">
           <div className="column">
             <p className="title is-5">
-              Political Science, University of Gdańsk
+              {major}, {university}
             </p>
-            <p className="subtitle is-6">March 2012 - April 2015</p>
+            <p className="subtitle is-6">{studied_from} - {studied_to}</p>
             <div className="container">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              {description}
             </div>
           </div>
           <div className="column is-narrow has-text-right">
-            <p>Gdańsk, Poland</p>
+            <p>{city}</p>
           </div>
         </div>
       </div>
