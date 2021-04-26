@@ -31,14 +31,7 @@ class PersonalInfoResume extends React.Component {
 
 class WorkResume extends React.Component {
   render() {
-    const {
-      company,
-      position,
-      from,
-      to,
-      location,
-      details,
-    } = this.props;
+    const { company, position, from, to, location, details } = this.props;
 
     return (
       <div className="container">
@@ -47,10 +40,10 @@ class WorkResume extends React.Component {
             <p className="title is-5 mt-3">
               {position}, {company}
             </p>
-            <p className="subtitle is-6">{from} - {to}</p>
-            <div className="container">
-              {details}
-            </div>
+            <p className="subtitle is-6">
+              {from} - {to}
+            </p>
+            <div className="container">{details}</div>
           </div>
           <div className="column is-narrow has-text-right">
             <p>{location}</p>
@@ -64,20 +57,25 @@ class WorkResume extends React.Component {
 class EducationResume extends React.Component {
   render() {
     const {
-      university, major, studied_from, studied_to, description, city
+      university,
+      major,
+      studied_from,
+      studied_to,
+      description,
+      city,
     } = this.props;
 
     return (
       <div className="container">
         <div className="columns is-centered">
           <div className="column">
-            <p className="title is-5">
+            <p className="title is-5 mt-3">
               {major}, {university}
             </p>
-            <p className="subtitle is-6">{studied_from} - {studied_to}</p>
-            <div className="container">
-              {description}
-            </div>
+            <p className="subtitle is-6">
+              {studied_from} - {studied_to}
+            </p>
+            <div className="container">{description}</div>
           </div>
           <div className="column is-narrow has-text-right">
             <p>{city}</p>
@@ -87,6 +85,5 @@ class EducationResume extends React.Component {
     );
   }
 }
-
 
 export { PersonalInfoResume, WorkResume, EducationResume };

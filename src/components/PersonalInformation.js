@@ -7,10 +7,10 @@ class PersonalInformation extends React.Component {
       firstName: this.props.name,
       lastName: this.props.surname,
       phone: this.props.phone,
-      email: this.props.email
+      email: this.props.email,
     };
-    this.inputHandler = this.inputHandler.bind(this)
-    this.onTrigger = this.onTrigger.bind(this)
+    this.inputHandler = this.inputHandler.bind(this);
+    this.onTrigger = this.onTrigger.bind(this);
   }
   inputHandler = (e) => {
     this.setState({
@@ -19,94 +19,94 @@ class PersonalInformation extends React.Component {
   };
 
   onTrigger = () => {
-    this.props.handleData(this.state.firstName, this.state.lastName, this.state.phone, this.state.email) 
-  }
+    this.props.handleData(
+      this.state.firstName,
+      this.state.lastName,
+      this.state.phone,
+      this.state.email
+    );
+  };
 
   render() {
     return (
-      
-        <div className="container">
-          <p className="title has-text-primary">Personal information</p>
-          <div className="field is-horizontal">
-            <div className="field-label is-normal">
-              <label className="label"></label>
-            </div>
-            <div className="field-body">
-              <div className="field">
-                <p className="control is-expanded has-icons-left">
-                  <input
-                    className="input"
-                    name="firstName"
-                    type="text"
-                    placeholder="Name"
-                    onChange={this.inputHandler}
-                    value = {this.state.firstName}
-                  />
-                </p>
-              </div>
-              <div className="field">
-                <p className="control is-expanded has-icons-left has-icons-right">
-                  <input
-                    className="input"
-                    name="lastName"
-                    type="text"
-                    placeholder="Surname"
-                    onChange={this.inputHandler}
-                    value = {this.state.lastName}
-                  />
-                </p>
-              </div>
-            </div>
+      <div className="container">
+        <p className="title has-text-primary">Personal information</p>
+        <div className="field is-horizontal">
+          <div className="field-label is-normal">
+            <label className="label"></label>
           </div>
-
-          <div className="field is-horizontal">
-            <div className="field-label is-normal"></div>
-            <div className="field-body">
-              <div className="field">
-                <p className="control is-expanded has-icons-left">
-                  <input
-                    className="input"
-                    name="phone"
-                    type="tel"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                    placeholder="Phone number"
-                    onChange={this.inputHandler}
-                    value = {this.state.phone}
-                  />
-                </p>
-              </div>
-              <div className="field">
-                <p className="control is-expanded has-icons-left has-icons-right">
-                  <input
-                    className="input"
-                    type="email"
-                    placeholder="Email"
-                    name="email"
-                    onChange={this.inputHandler}
-                    value = {this.state.email}
-                  />
-                </p>
-              </div>
+          <div className="field-body">
+            <div className="field">
+              <p className="control is-expanded has-icons-left">
+                <input
+                  className="input"
+                  name="firstName"
+                  type="text"
+                  placeholder="Name"
+                  onChange={this.inputHandler}
+                  value={this.state.firstName}
+                />
+              </p>
             </div>
-          </div>
-
-          <div className="field is-horizontal">
-            <div className="field-label"></div>
-            <div className="field-body">
-              <div className="field">
-                <div className="control">
-                  <button
-                    className="button is-primary"
-                    onClick={this.onTrigger}
-                  >
-                    Submit
-                  </button>
-                </div>
-              </div>
+            <div className="field">
+              <p className="control is-expanded has-icons-left has-icons-right">
+                <input
+                  className="input"
+                  name="lastName"
+                  type="text"
+                  placeholder="Surname"
+                  onChange={this.inputHandler}
+                  value={this.state.lastName}
+                />
+              </p>
             </div>
           </div>
         </div>
 
+        <div className="field is-horizontal">
+          <div className="field-label is-normal"></div>
+          <div className="field-body">
+            <div className="field">
+              <p className="control is-expanded has-icons-left">
+                <input
+                  className="input"
+                  name="phone"
+                  type="tel"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  placeholder="Phone number"
+                  onChange={this.inputHandler}
+                  value={this.state.phone}
+                />
+              </p>
+            </div>
+            <div className="field">
+              <p className="control is-expanded has-icons-left has-icons-right">
+                <input
+                  className="input"
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  onChange={this.inputHandler}
+                  value={this.state.email}
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="field is-horizontal">
+          <div className="field-label"></div>
+          <div className="field-body">
+            <div className="field">
+              <div className="control">
+                <button className="button is-primary" onClick={this.onTrigger}>
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 }

@@ -165,6 +165,7 @@ class App extends React.Component {
     this.setState({
       work2Visible: true,
       work3Visible: true,
+      edu2Visible: true,
       personalInformations: {
         firstName: "John",
         lastName: "Doe",
@@ -208,12 +209,12 @@ class App extends React.Component {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum viverra tempor. Ut tristique dolor ac commodo laoreet. Proin porta hendrerit ex, non elementum ante consectetur rutrum. In a volutpat sapien, tincidunt porttitor elit. In hac habitasse platea dictumst. Mauris malesuada imperdiet libero id vehicula. Aliquam neque tellus, consectetur elementum. ",
       },
       edu_2: {
-        university: "",
-        major: "",
-        studied_from: "",
-        studied_to: "",
-        location: "",
-        details: "",
+        university: "California High School",
+        major: "High School",
+        studied_from: "2009-09-01",
+        studied_to: "2012-04-30",
+        location: "San Ramon, California",
+        details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend, tortor in fringilla ornare, nisi leo euismod nunc, vel rutrum nunc ligula a orci. Suspendisse dignissim lorem urna, non lobortis nibh elementum in. Morbi vestibulum, lectus quis lobortis porta, risus augue vulputate ligula, vitae maximus nulla nibh nec enim. Nunc. ",
       },
       edu_3: {
         university: "",
@@ -405,24 +406,30 @@ class App extends React.Component {
                 description={this.state.edu_1.details}
                 city={this.state.edu_1.location}
               />
-              {this.state.edu_2.university!== "" ? (              
-              <EducationResume
-                university={this.state.edu_2.university}
-                major={this.state.edu_2.major}
-                studied_from={this.state.edu_2.studied_from}
-                studied_to={this.state.edu_2.studied_to}
-                description={this.state.edu_2.details}
-                city={this.state.edu_2.location}
-              />) : (<></>)}
-                            {this.state.edu_3.university!== "" ? (              
-              <EducationResume
-                university={this.state.edu_3.university}
-                major={this.state.edu_3.major}
-                studied_from={this.state.edu_3.studied_from}
-                studied_to={this.state.edu_3.studied_to}
-                description={this.state.edu_3.details}
-                city={this.state.edu_3.location}
-              />) : (<></>)}
+              {this.state.edu_2.university !== "" ? (
+                <EducationResume
+                  university={this.state.edu_2.university}
+                  major={this.state.edu_2.major}
+                  studied_from={this.state.edu_2.studied_from}
+                  studied_to={this.state.edu_2.studied_to}
+                  description={this.state.edu_2.details}
+                  city={this.state.edu_2.location}
+                />
+              ) : (
+                <></>
+              )}
+              {this.state.edu_3.university !== "" ? (
+                <EducationResume
+                  university={this.state.edu_3.university}
+                  major={this.state.edu_3.major}
+                  studied_from={this.state.edu_3.studied_from}
+                  studied_to={this.state.edu_3.studied_to}
+                  description={this.state.edu_3.details}
+                  city={this.state.edu_3.location}
+                />
+              ) : (
+                <></>
+              )}
               <hr />
               {button}
               <DisplayDemo onClick={this.handleDemo} />
