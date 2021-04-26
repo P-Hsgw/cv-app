@@ -18,4 +18,14 @@ function EditResume(props) {
   );
 }
 
-export { DisplayResume, EditResume }
+function DisplayDemo(props) {
+  return(
+    <div className="buttons is-centered">
+    <button onClick={props.onClick} className="button is-warning is-medium">
+      Display Demo
+    </button>
+    </div>
+  )
+}
+
+export { DisplayResume, EditResume, DisplayDemo }
