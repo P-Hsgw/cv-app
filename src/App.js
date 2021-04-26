@@ -163,6 +163,8 @@ class App extends React.Component {
 
   handleDemo = () => {
     this.setState({
+      work2Visible: true,
+      work3Visible: true,
       personalInformations: {
         firstName: "John",
         lastName: "Doe",
