@@ -332,14 +332,14 @@ class App extends React.Component {
 
               {this.state.edu3Visible && (
                 <Education
-                  id="edu_2"
+                  id="edu_3"
                   handleData={this.handleEducationData}
-                  university={this.state.edu_2.university}
-                  major={this.state.edu_2.major}
-                  studied_from={this.state.edu_2.studied_from}
-                  studied_to={this.state.edu_2.studied_to}
-                  details={this.state.edu_2.details}
-                  location={this.state.edu_2.location}
+                  university={this.state.edu_3.university}
+                  major={this.state.edu_3.major}
+                  studied_from={this.state.edu_3.studied_from}
+                  studied_to={this.state.edu_3.studied_to}
+                  details={this.state.edu_3.details}
+                  location={this.state.edu_3.location}
                   onClick={this.toggleEdu3}
                   visible={this.state.edu3Visible}
                   buttonVisible={false}
