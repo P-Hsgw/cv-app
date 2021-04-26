@@ -14,7 +14,7 @@ class Header extends React.Component {
           <div className="navbar-item">
             <p>Website created by Patryk Hasegawa</p>
           </div>
-          <div className="navbar-item p-0">
+          <div className="navbar-item p-0 is-mobile">
             <a href="https://github.com/P-Hsgw" target="blank">
               <span className="icon">
                 <FontAwesomeIcon icon={faGithub} />

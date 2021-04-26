@@ -140,7 +140,7 @@ class App extends React.Component {
         company: "Google",
         position: "Senior Software Engineer",
         from: "2020-01-01",
-        to: "2021.02.01",
+        to: "2021-02-01",
         city: "San Francisco, California",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at fermentum velit, ac bibendum diam. Pellentesque quis convallis sem. Aliquam erat volutpat. Curabitur congue eleifend eleifend. Pellentesque rutrum felis nec nisi egestas, sit amet blandit justo auctor. Donec id diam non nulla semper ultrices. Proin finibus varius odio in finibus.",
       },
