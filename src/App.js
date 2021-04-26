@@ -369,8 +369,31 @@ class App extends React.Component {
                 details={this.state.work_1.description}
               />
 
-              {/* <WorkResume id="work_2" company={this.state.work_2.company}/>
-            <WorkResume id="work_3" company={this.state.work_3.company}/> */}
+              {this.state.work_2.company !== "" ? (
+                <WorkResume
+                  company={this.state.work_2.company}
+                  position={this.state.work_2.position}
+                  from={this.state.work_2.from}
+                  to={this.state.work_2.to}
+                  location={this.state.work_2.city}
+                  details={this.state.work_2.description}
+                />
+              ) : (
+                <></>
+              )}
+
+              {this.state.work_3.company !== "" ? (
+                <WorkResume
+                  company={this.state.work_3.company}
+                  position={this.state.work_3.position}
+                  from={this.state.work_3.from}
+                  to={this.state.work_3.to}
+                  location={this.state.work_3.city}
+                  details={this.state.work_3.description}
+                />
+              ) : (
+                <></>
+              )}
 
               <hr />
               <p className="title has-text-primary">Education</p>
@@ -382,6 +405,24 @@ class App extends React.Component {
                 description={this.state.edu_1.details}
                 city={this.state.edu_1.location}
               />
+              {this.state.edu_2.university!== "" ? (              
+              <EducationResume
+                university={this.state.edu_2.university}
+                major={this.state.edu_2.major}
+                studied_from={this.state.edu_2.studied_from}
+                studied_to={this.state.edu_2.studied_to}
+                description={this.state.edu_2.details}
+                city={this.state.edu_2.location}
+              />) : (<></>)}
+                            {this.state.edu_3.university!== "" ? (              
+              <EducationResume
+                university={this.state.edu_3.university}
+                major={this.state.edu_3.major}
+                studied_from={this.state.edu_3.studied_from}
+                studied_to={this.state.edu_3.studied_to}
+                description={this.state.edu_3.details}
+                city={this.state.edu_3.location}
+              />) : (<></>)}
               <hr />
               {button}
               <DisplayDemo onClick={this.handleDemo} />
