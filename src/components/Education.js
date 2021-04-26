@@ -2,6 +2,7 @@ import React from "react";
 import uniqid from "uniqid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
+import { EduButton } from "./ToggleButtons"
 
 class Education extends React.Component {
   constructor(props) {
@@ -152,6 +153,8 @@ class Education extends React.Component {
                 >
                   Submit
                 </button>
+                {this.props.buttonVisible ? (<EduButton onClick={this.props.onClick} visible={this.props.visible}/>) : (<></>)}
+
               </div>
             </div>
           </div>

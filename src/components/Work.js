@@ -2,6 +2,7 @@ import React from "react";
 import uniqid from "uniqid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
+import { WorkButton } from "./ToggleButtons"
 
 class Work extends React.Component {
   constructor(props) {
@@ -151,7 +152,8 @@ class Work extends React.Component {
                   onClick={this.onTrigger}
                 >
                   Submit
-                </button>
+                </button> 
+                {this.props.buttonVisible ? (<WorkButton onClick={this.props.onClick} visible={this.props.visible}/>) : (<></>)}
               </div>
             </div>
           </div>

@@ -28,4 +28,42 @@ function DisplayDemo(props) {
   )
 }
 
-export { DisplayResume, EditResume, DisplayDemo }
+function WorkButton(props) {
+  return(
+    <div className="buttons is-right">
+      {!props.visible ? (
+
+    <button onClick={props.onClick} className="button is-warning">
+      Add Work Experience
+    </button>
+
+      ) : (
+        <button onClick={props.onClick} className="button is-warning">
+        Remove Work Experience
+        </button>
+      )}
+
+    </div>
+  )
+}
+
+function EduButton(props) {
+  return(
+    <div className="buttons is-right">
+      {!props.visible ? (
+
+    <button onClick={props.onClick} className="button is-warning">
+      Add Education
+    </button>
+
+      ) : (
+        <button onClick={props.onClick} className="button is-warning">
+        Remove Education
+        </button>
+      )}
+
+    </div>
+  )
+}
+
+export { DisplayResume, EditResume, DisplayDemo, WorkButton, EduButton }
