@@ -268,7 +268,7 @@ class App extends React.Component {
                 details={this.state.work_1.description}
                 onClick={this.toggleWork2}
                 visible={this.state.work2Visible}
-                buttonVisible={true}
+                buttonVisible
               />
 
               {this.state.work2Visible && (
@@ -283,7 +283,7 @@ class App extends React.Component {
                   details={this.state.work_2.description}
                   onClick={this.toggleWork3}
                   visible={this.state.work3Visible}
-                  buttonVisible={true}
+                  buttonVisible
                 />
               )}
 
@@ -315,7 +315,7 @@ class App extends React.Component {
                 location={this.state.edu_1.location}
                 onClick={this.toggleEdu2}
                 visible={this.state.edu2Visible}
-                buttonVisible={true}
+                buttonVisible
               />
               {this.state.edu2Visible && (
                 <Education
@@ -329,7 +329,7 @@ class App extends React.Component {
                   location={this.state.edu_2.location}
                   onClick={this.toggleEdu3}
                   visible={this.state.edu3Visible}
-                  buttonVisible={true}
+                  buttonVisible
                 />
               )}
 
